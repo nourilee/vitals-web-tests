@@ -1,0 +1,22 @@
+{
+  "name": "vitals-web-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "allure:generate": "allure generate ./allure-results --clean",
+    "allure:open": "allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.29",
+    "allure-playwright": "^3.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
