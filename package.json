@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test",
+    "test": "npx playwright test --project=chromium --reporter=allure-playwright",
+    "report": "node generate-report.js",
+    "report:notify": "npm run report && ./notify-slack.sh",
     "allure:generate": "allure generate ./allure-results --clean",
     "allure:open": "allure open"
   },
