@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test --project=chromium --reporter=allure-playwright",
+    "test:smoke": "npx playwright test tests/smoke --project=chromium --reporter=allure-playwright",
+    "test:e2e": "npx playwright test tests/e2e --project=chromium --reporter=allure-playwright",
     "report": "node generate-report.js",
     "report:notify": "npm run report && ./notify-slack.sh",
     "allure:generate": "allure generate ./allure-results --clean",
@@ -14,7 +16,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.52.0",
+    "@playwright/test": "^1.53.1",
     "@types/node": "^22.15.29",
     "allure-playwright": "^3.2.2"
   },
