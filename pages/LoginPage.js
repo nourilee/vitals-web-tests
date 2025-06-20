@@ -18,6 +18,7 @@ exports.LoginPage = class LoginPage extends BasePage {
 
   async goto() {
     await this.page.goto(process.env.BASE_URL + '/profile');
+    await this.waitForPageReady('**/profile');
   }
 
   async loginWithMobile(phone, password) {

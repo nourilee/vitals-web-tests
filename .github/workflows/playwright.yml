@@ -8,6 +8,11 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://dev.vitals.co.th/en
+      PHONE_NUMBER: 66948651108
+      EMAIL: barrios638@mailinator.com
+      PASSWORD: Test123@
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
